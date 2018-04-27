@@ -27,5 +27,22 @@ end
 
 
 def fourth_anagram?(str1, str2)
+  char_count1 = Hash.new(0)
+  char_count2 = Hash.new(0)
+
+  str1.each_char do |char|
+    char_count1[char] += 1
+  end
+
+  str2.each_char do |char|
+    char_count2[char] += 1
+  end
+
+  char_count1 == char_count2
+
+
 
 end
+
+p fourth_anagram?("gizmo", "sally")
+p fourth_anagram?("elvis", "lives") 
